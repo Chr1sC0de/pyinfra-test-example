@@ -1,0 +1,19 @@
+[project]
+name = "deploy-dotfiles"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Chris Mamon", email = "chrisam1993@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pyinfra>=3.5.1",
+]
+
+[project.scripts]
+deploy-dotfiles = "deploy_dotfiles:main"
+
+[build-system]
+requires = ["uv_build>=0.9.9,<0.10.0"]
+build-backend = "uv_build"
