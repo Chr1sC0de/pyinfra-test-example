@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Pyinfra",
+            "type": "python",
+            "request": "launch",
+            "program": ".venv/bin/pyinfra",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inventory.py",
+                "deploy_dotfiles.all"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
