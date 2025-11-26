@@ -6,7 +6,7 @@ from pyinfra.api.facts import get_facts
 from pyinfra.api.operations import run_ops
 from pyinfra.facts.server import Os
 
-import deploy_dotfiles
+import pyinfra_test_example
 
 
 def test_my_pyinfra_deploy(state: State, host: testinfra.host.Host):
@@ -16,7 +16,7 @@ def test_my_pyinfra_deploy(state: State, host: testinfra.host.Host):
     # Start adding operations
     add_deploy(
         state,
-        deploy_dotfiles.main,
+        pyinfra_test_example.main,
     )
 
     # And finally we run the ops

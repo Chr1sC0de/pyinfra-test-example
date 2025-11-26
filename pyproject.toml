@@ -1,5 +1,5 @@
 [project]
-name = "deploy-dotfiles"
+name = "pyinfra-test-example"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 [project.scripts]
-deploy-dotfiles = "deploy_dotfiles:main"
+pyinfra-test-example = "pyinfra_test_example:main"
 
 [dependency-groups]
 dev = [

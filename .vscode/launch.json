@@ -8,9 +8,13 @@
             "program": ".venv/bin/pyinfra",
             "cwd": "${workspaceFolder}",
             "args": [
-                "inventory.py",
-                "deploy_dotfiles.all"
+                "pyinfra_test_example.inventories.podman",
+                "pyinfra_test_example.main",
+                "-y"
             ],
+            "env": {
+                "GEVENT_SUPPORT": "True"
+            },
             "console": "integratedTerminal",
             "justMyCode": true
         }

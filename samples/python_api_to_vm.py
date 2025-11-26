@@ -7,7 +7,7 @@ from pyinfra.api.facts import get_facts
 from pyinfra.api.operations import run_ops
 from pyinfra.facts.server import Os
 
-import deploy_dotfiles
+import pyinfra_test_example
 
 # Define your inventory (@local means execute on localhost using subprocess)
 # https://docs.pyinfra.com/en/3.x/apidoc/pyinfra.api.inventory.html
@@ -40,7 +40,7 @@ connect_all(state)
 # Start adding operations
 result1 = add_deploy(
     state,
-    deploy_dotfiles.main,
+    pyinfra_test_example.main,
 )
 
 # And finally we run the ops
