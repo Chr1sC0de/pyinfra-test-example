@@ -1,0 +1,39 @@
+version: "3.9"
+networks:
+  dagster_network:
+    driver: bridge
+    name: podman_network
+
+
+services:
+  ubuntu-podman:
+    image: localhost/ubuntu-podman
+    stdin_open: true
+    tty: true
+    cap_add:
+      - sys_admin
+      - mknod
+    devices:
+      - "/dev/fuse:/dev/fuse"
+    security_opt:
+      - "label=disable"
+    networks:
+      - dagster_network
+    volumes:
+      - ./:/workspace   # Mount current directory to /workspace in container
+  rocky-podman:
+    image: localhost/rocky-podman-9
+    stdin_open: true
+    tty: true
+    cap_add:
+      - sys_admin
+      - mknod
+    devices:
+      - "/dev/fuse:/dev/fuse"
+    security_opt:
+      - "label=disable"
+    networks:
+      - dagster_network
+    ports:
+      - "2222:22"         # Map container SSH port to host
+    command: ["/usr/sbin/sshd", "-D"]  # Start SSHD in foreground

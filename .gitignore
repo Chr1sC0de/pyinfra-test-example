@@ -10,3 +10,4 @@ wheels/
 .venv
 .ignore
 .envrc
+pyinfra-debug.log

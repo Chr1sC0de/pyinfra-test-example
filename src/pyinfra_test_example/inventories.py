@@ -5,10 +5,10 @@ def vm():
     return dict(
         app_servers=[
             (
-                f"@ssh/{os.environ['VM_IP_ADDRESS']}",
+                f"@ssh/{os.environ['SSH_HOST']}",
                 {
-                    "ssh_user": os.environ["VM_USER"],
-                    "_sudo_password": os.environ["VM_PASSWORD"],
+                    "ssh_user": os.environ["SSH_USER"],
+                    "ssh_password": os.environ["SSH_PASSWORD"],
                 },
             )
         ]
