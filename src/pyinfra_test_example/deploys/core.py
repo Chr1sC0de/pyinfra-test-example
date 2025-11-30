@@ -1,6 +1,6 @@
 from pyinfra import host
 from pyinfra.api import deploy
-from pyinfra.operations import apt
+from pyinfra.operations import apt, files
 
 
 @deploy("Install Core Dependencies")
@@ -40,4 +40,10 @@ def install():
         name="Upgrade apt packages and remove unneeded dependencies",
         auto_remove=True,
         _if=lambda: host.name.startswith("@podman"),
+    )
+
+    files.block(
+        name="Create hello.txt with content",
+        path="/tmp/hello.txt",
+        content="hello world\n",
     )

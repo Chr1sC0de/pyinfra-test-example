@@ -6,7 +6,7 @@ networks:
 
 
 services:
-  ubuntu-podman:
+  ubuntu-podman-dev:
     image: localhost/ubuntu-podman
     stdin_open: true
     tty: true
@@ -21,8 +21,8 @@ services:
       - dagster_network
     volumes:
       - ./:/workspace   # Mount current directory to /workspace in container
-  rocky-podman:
-    image: localhost/rocky-podman-9
+  ubuntu-podman-ssh:
+    image: localhost/ubuntu-podman
     stdin_open: true
     tty: true
     cap_add:

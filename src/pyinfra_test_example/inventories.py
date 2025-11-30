@@ -1,7 +1,7 @@
 import os
 
 
-def vm():
+def ssh():
     return dict(
         app_servers=[
             (
