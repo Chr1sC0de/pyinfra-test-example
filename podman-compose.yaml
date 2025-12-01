@@ -10,9 +10,7 @@ services:
     image: localhost/ubuntu-podman
     stdin_open: true
     tty: true
-    cap_add:
-      - sys_admin
-      - mknod
+    user: "ubuntu"
     devices:
       - "/dev/fuse:/dev/fuse"
     security_opt:
@@ -25,9 +23,6 @@ services:
     image: localhost/ubuntu-podman
     stdin_open: true
     tty: true
-    cap_add:
-      - sys_admin
-      - mknod
     devices:
       - "/dev/fuse:/dev/fuse"
     security_opt:

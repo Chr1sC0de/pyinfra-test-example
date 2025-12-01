@@ -4,7 +4,7 @@
 ## Deploy to a VM
 
 ```bash 
-pyinfra pyinfra_test_example.inventories.ssh pyinfra_test_example.main
+pyinfra pyinfra_test_example.inventories.ssh pyinfra_test_example.main -y
 ```
 
 ## Deploy to podman
